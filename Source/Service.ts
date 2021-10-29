@@ -21,11 +21,19 @@ export default function Service(): Promise<void>
 
 	return new Promise(function (resolve)
 	{
-		createServer(Print)
-			.listen(function ()
-			{
-				log("Started.\n");
-				resolve();
-			});
+		const server = createServer(Print);
+
+		server.listen(function ()
+		{
+			const address = server.address();
+
+			const port = typeof address === "string"
+				? "Unknown"
+				: address?.port;
+
+			log(`Started service on port ${port} .\n`);
+
+			resolve();
+		});
 	});
 }

@@ -16,5 +16,8 @@
 	"bugs": {
 		"url": "https://github.com/Brietoe/sentinel/issues"
 	},
-	"homepage": "https://github.com/Brietoe/sentinel#readme"
+	"homepage": "https://github.com/Brietoe/sentinel#readme",
+	"devDependencies": {
+		"@types/node": "^16.11.6"
+	}
 }

@@ -1,5 +1,15 @@
 # Sentinel Protocol
-Managed transaction signing using rulebased restrictions.
+Sentinel provides the means for generating limited scope access tokens for XRPL transaction signing. Each token is associated with an end user and a set of predicates as rules.
+A users identity is tied to their particular token and the set of predicates must hold true for any transaction signing request.
+
+For example, one could generate a token that grants access to send payments using the following rule template:
+"Can {transaction type} of {quantifier} {number} {currency} to {address}, {quantifier} {frequency} per {period}"
+A concrete example could look like this:
+"*Can send payment up to 5 XRP to rSomeOtherXRPLAddress at most once per day*"
+
+Not all fields need to be used and different transaction types would come with different options.
+
+Any access token can be revoked at any time.
 
 ### Note:
 I got married this week and am handling this submission while on travel. In process of porting design details from hardwritten paper notes to Github.

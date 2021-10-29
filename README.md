@@ -3,8 +3,11 @@ Sentinel provides the means for generating limited scope access tokens for XRPL 
 A users identity is tied to their particular token and the set of predicates must hold true for any transaction signing request.
 
 For example, one could generate a token that grants access to send payments using the following rule template:
+
 "Can {transaction type} of {quantifier} {number} {currency} to {address}, {quantifier} {frequency} per {period}"
+
 A concrete example could look like this:
+
 "*Can send payment up to 5 XRP to rSomeOtherXRPLAddress at most once per day*"
 
 Not all fields need to be used and different transaction types would come with different options.
@@ -13,7 +16,7 @@ Any access token can be revoked at any time.
 
 ### Note:
 I got married this week and am handling this submission while on travel. In process of porting design details from hardwritten paper notes to Github.
-Should complete by end of day.
+Should complete by end of day. I get home tomorrow night (Oct 30th) and will have a functional NodeJS demo available for Oct 31st.
 
 ##	Requirements
 * NodeJS (Tested with v17.0.1)

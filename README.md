@@ -1,3 +1,11 @@
+Update 11/5/21: 
+Protocol is very real however demo is not live for grant deadline.
+I'm still out of state on another trip, life this month has been hectic.
+If the security solution I'm offering is still of interest, I would be happy to open up a conversation about it.
+As for presenting a working demo, I would need another week to complete.
+
+
+
 # Sentinel Protocol
 Sentinel provides the means for generating limited scope access tokens for XRPL transaction signing. Each token is associated with an end user and a set of predicates as rules.
 A users identity is tied to their particular token and the set of predicates must hold true for any transaction signing request.

@@ -25,8 +25,8 @@ Not all fields need to be used and different transaction types would come with d
 Any access token can be revoked at any time.
 
 ### Note:
-I got married this week and am handling this submission while on travel. In process of porting design details from hardwritten paper notes to Github.
-Should complete by end of day. I get home tomorrow night (Oct 30th) and will have a functional NodeJS demo available for Oct 31st.
+I got married this week and am handling this submission while on travel. 
+In process of porting design details from hardwritten paper notes to Github.
 
 ##	Requirements
 * NodeJS (Tested with v17.0.1)

@@ -4,6 +4,8 @@ I'm still out of state on another trip, life this month has been hectic.
 If the security solution I'm offering is still of interest, I would be happy to open up a conversation about it.
 As for presenting a working demo, I would need another week to complete.
 
+To see more of my history and experience with the XRPL, join my Discord:
+https://discord.gg/mxU8MmXC
 
 
 # Sentinel Protocol
@@ -38,3 +40,4 @@ tsc
 ```
 node ./Release/Sentinel.js
 ```
+

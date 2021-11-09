@@ -1,3 +1,6 @@
+Update 11/9/21:
+Just settled in back home. Catching up...
+
 Update 11/5/21: 
 Protocol is very real however demo is not live for grant deadline.
 I'm still out of state on another trip, life this month has been hectic.

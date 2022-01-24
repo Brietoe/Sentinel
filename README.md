@@ -1,4 +1,7 @@
 # Sentinel Protocol
+
+[View Project Milestones](https://github.com/Brietoe/sentinel/blob/main/Milestones.md)
+
 Sentinel provides the means for generating limited scope access tokens for XRPL transaction signing. Each token is associated with an end user and a set of predicates as rules.
 A users identity is tied to their particular token and the set of predicates must hold true for any transaction signing request.
 
@@ -13,10 +16,6 @@ A concrete example could look like this:
 Not all fields need to be used and different transaction types would come with different options.
 
 Any access token can be revoked at any time.
-
-### Note:
-I got married this week and am handling this submission while on travel.
-In process of porting design details from hardwritten paper notes to Github.
 
 ##	Requirements
 * NodeJS (Tested with v17.0.1)

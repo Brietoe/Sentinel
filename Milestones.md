@@ -2,7 +2,7 @@
 
 # Milestones
 The 6 month milestones are broken down into three two-month-phases, **Define**, **Integrate** and **Refine**.
-
+[milestones.md]
 ##	Phase One: Define
 Logical Rules Engine and Core Service Daemon
 

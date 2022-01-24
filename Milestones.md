@@ -1,6 +1,6 @@
 # **Milestones**
 
-The 6 month project timeline is broken down into three two-month-phases, **Define**, **Integrate** and **Refine**.
+The 6 month project timeline is broken down into three two-month-phases, **Define**, **Refine** and **Integrate**.
 
 This update milestone document aims to address developer integration concerns and provides service provider implementation examples.
 

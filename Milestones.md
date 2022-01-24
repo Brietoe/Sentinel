@@ -39,15 +39,20 @@ If every predicate invariants are respected then 'transaction request' will be s
 
 ### **Logical Rules Engine**
 
-*	Define a new rule
+**Define a new rule**
 
-	**Example**
+Example
 
-	Netflix would like to accept XRP as a valid payment option but requires recurring monthly payments.
+	Netflix would like to accept XRP as a valid payment option so they integrated the Sentinel protocol to enable recurring monthly payments.
 
-```
-	To define a new rule that allows a counterparty entity to pay themselves with your wallet
-```
+	Netflix must first define the scope of their request.
+
+	Using the customers PayString ID, Neflix can discover the customers Sentinel server endpoint.
+
+
+
+
+
 *	Query rule options
 	*	Query rule options example
 *	Extending ruleset
@@ -66,6 +71,7 @@ If every predicate invariants are respected then 'transaction request' will be s
 	* Query transaction history example
 *	Query Current state
 	* Query Current state example
+*	PayString
 
 *	Configuration options
 	*	Boot on startup

@@ -11,7 +11,8 @@ Primary person or entity using Sentinel to generate access tokens that grant lim
 External person or entity that requests permission to submit transactions on the *users* behalf.
 
 ### Server
-The software process that the *user* runs to use the sentinel service. This software is the users primary interface for configuration and monitoring. The server can run as a background service or be instantiated upon request. The server can be run by a custodian if needed but provides no protection from a 'bad actor' custodian; Sentinel can be configured with distributed multi-signing to address this issue.
+The software process that the *user* runs to use the sentinel protocol. This software is the users primary interface for configuration and monitoring. The server can run as a background process or be instantiated upon request. The server can be run by a custodian if needed but provides no protection from a 'bad actor' custodian; Sentinel can be configured with distributed multi-signing to address this issue.
+
 The server is responsible for:
 * Granting access tokens
 * Storing access tokens
@@ -19,8 +20,6 @@ The server is responsible for:
 * Signing transations
 *	Revoking access tokens
 *	Expose an external interface for access requests and transaction signing.
-
-Note: The words **service** or **daemon** may be used interchangebly with **Server** in this document.
 
 ###	Client
 The software component that connects to the *server* and submits requests for access or transaction signing. This is the software instance that the *counterparty* uses to interact with Sentinel.
@@ -40,17 +39,24 @@ If every predicate invariants are respected then 'transaction request' will be s
 
 ### **Logical Rules Engine**
 
-*	Define ruleset
-	* Define ruleset Example
 *	Define a new rule
-	* Define New rule Example
+
+	**Example**
+
+	Netflix would like to accept XRP as a valid payment option but requires recurring monthly payments.
+
+```
+	To define a new rule that allows a counterparty entity to pay themselves with your wallet
+```
 *	Query rule options
 	*	Query rule options example
 *	Extending ruleset
+*	Define ruleset
+	* Define ruleset Example
 
 * Isolated 'hot-mode' rulesets.
 
-### **Core Service Daemon**
+### **Core Server Daemon**
 
 *	Generate access token
 	* Generate access token example
@@ -67,7 +73,7 @@ If every predicate invariants are respected then 'transaction request' will be s
 
 ### **Process Requests**
 
-*	Service handler
+*	Request handler
 	* Example
 *	Security
 	*	Encryption
@@ -92,7 +98,7 @@ Pen-testing - try to break hack product.
 
 Release v1.00
 
-Core service should only receive bug fixes in this phase, no new features.
+Core server should only receive bug fixes in this phase, no new features.
 
 UX/UI features may be added.
 

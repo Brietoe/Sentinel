@@ -2,15 +2,13 @@
 
 The 6 month project timeline is broken down into three two-month-phases, **Define**, **Refine** and **Integrate**.
 
-This document aims to address developer integration concerns and provides developer integration examples.
-
 ### **Definitions**
 
 ### User
 Primary person or entity using Sentinel to generate access tokens that grant limited access to an XRPL account for transaction signing.
 
 ### Counterparty
-External person or entity that requests permission to submit transactions on the *Users* behalf.
+External person or entity that requests permission to submit transactions on the *users* behalf.
 
 ### Server
 The software process that the *user* runs to use the sentinel service. This software is the users primary interface for configuration and monitoring. The server can run as a background service or be instantiated upon request. The server can be run by a custodian if needed but provides no protection from a 'bad actor' custodian; Sentinel can be configured with distributed multi-signing to address this issue.

@@ -1,24 +1,61 @@
 
 
-# Milestones
+# **Milestones**
+
 The 6 month project timeline is broken down into three two-month-phases, **Define**, **Integrate** and **Refine**.
 
-##	Phase One: Define
-Logical Rules Engine and Core Service Daemon
+
+
+This update milestone document aims to address developer integration concerns and provides service provider implementation examples.
+
+## **Definitions**
+
+### **User**
+Primary person or entity using Sentinel to generate access tokens that grant limited access to an XRPL account for transaction signing.
+
+### **Counterparty**
+External person or entity that requests permission to submit transactions on the *Users* behalf.
+
+### **Server**
+The software process that the *user* runs to use the sentinel service. This software is the users primary interface for configuration and monitoring. The server can run as a background service or be instantiated upon request. The server can be run by a custodian if needed but provides no protection from a 'bad actor' custodian; Sentinel can be configured with distributed multi-signing to address this issue.
+The server is responsible for:
+* Granting access tokens
+* Storing access tokens
+* Providing a log of all transactions
+* Signing transations
+*	Revoking access tokens
+*	Expose an external interface for access requests and transaction signing.
+
+Note: The words **service** or **daemon** may be used interchangebly with **Server** in this document.
+
+###	**Client**
+The software component that connects to the *server* and submits requests for access or transaction signing. This is the software instance that the *counterparty* uses to interact with Sentinel.
+
+
+##	**Phase One: Define**
+### **Logical Rules Engine**
+
+**Defining rules**
+
+**Defining rules Example**
+
+### **Core Service Daemon**
+
+**Process Requests**
+
+**Process Requests Example**
+
+## 	**Phase Two: Integrate**
 
 
 
-## 	Phase Two: Integrate
-
-
-
-##	Phase Three: Refine
+##	**Phase Three: Refine**
 
 
 
 
 
-## Original Milestones
+## **Original Milestones**
 
 ```
 Month 1: Core Service Daemon

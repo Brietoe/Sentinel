@@ -17,6 +17,7 @@ Not all fields need to be used and different transaction types would come with d
 
 Any access token can be revoked at any time.
 
+
 ##	Requirements
 * NodeJS (Tested with v17.0.1)
 * Typescript (Tested with v4.4.4)

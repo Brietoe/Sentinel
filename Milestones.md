@@ -31,8 +31,8 @@ The software component that connects to the *server* and submits requests for ac
 The set of all rule configuration options within the domain of discourse.
 
 ### Rule
-A predicate defined by a Ruleset element and configuration options.
-A rule is created, when the *user* instantiates a ruleset element with it's configuration.
+A predicate defined by a Ruleset element and it's configuration options.
+When 'signing requests' are processed, the predicate is appled to the request. If every predicate yields 'true' then the transaction request will be submitted for signing.
 
 ##	**Phase One: Define**
 

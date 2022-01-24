@@ -28,8 +28,11 @@ Note: The words **service** or **daemon** may be used interchangebly with **Serv
 The software component that connects to the *server* and submits requests for access or transaction signing. This is the software instance that the *counterparty* uses to interact with Sentinel.
 
 ###	Ruleset
-The Ruleset is a plugin that encodes a model of the domain of discourse that defines all possible rules within a domain and their configuration options.
+The set of all rule configuration options within the domain of discourse.
 
+### Rule
+A predicate defined by a Ruleset element and configuration options.
+A rule is created, when the *user* instantiates a ruleset element with it's configuration.
 
 ##	**Phase One: Define**
 

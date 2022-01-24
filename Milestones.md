@@ -42,13 +42,13 @@ If every predicate invariants are respected then 'transaction request' will be s
 **Define a new rule**
 
 Example
+```
+Netflix would like to accept XRP as a valid payment option so they integrated the Sentinel protocol to enable recurring monthly payments.
 
-	Netflix would like to accept XRP as a valid payment option so they integrated the Sentinel protocol to enable recurring monthly payments.
+Netflix must first define the scope of their request.
 
-	Netflix must first define the scope of their request.
-
-	Using the customers PayString ID, Neflix can discover the customers Sentinel server endpoint.
-
+Using the customers PayString ID, Neflix can discover the customers Sentinel server endpoint.
+```
 
 
 

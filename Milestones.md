@@ -37,22 +37,25 @@ The software component that connects to the *server* and submits requests for ac
 ### **Logical Rules Engine**
 
 *	Define a new rule
-	* Example
+	* Define New rule Example
+*	Query rule options
+	*	Query rule options example
 
 ### **Core Service Daemon**
 
 *	Generate access token
-	* Example
+	* Generate access token example
 *	Revoke access token
-	* Example
-*	Query transaction history and current state
-	* Example
+	* Revoke access token example
+*	Query transaction history
+	* Query transaction history example
+*	Query Current state
+	* Query Current state example
 
 ### **Process Requests**
 
-
-### **Process Requests Example**
-
+*	Service handler
+	* Example
 
 ## 	**Phase Two: Integrate**
 

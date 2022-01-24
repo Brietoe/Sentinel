@@ -32,9 +32,13 @@ The set of all rule configuration options within the domain of discourse.
 
 ### Rule
 A predicate defined by a Ruleset element and it's configuration options.
-When 'signing requests' are processed, the predicate is appled to the request. If every predicate yields 'true' then the transaction request will be submitted for signing.
+When 'signing requests' are processed, the predicate is appled to the request.
+If every predicate invariants are respected then 'transaction request' will be submitted for signing.
+
+
 
 ##	**Phase One: Define**
+
 
 ### **Logical Rules Engine**
 
@@ -46,6 +50,7 @@ When 'signing requests' are processed, the predicate is appled to the request. I
 	*	Query rule options example
 *	Extending ruleset
 
+* Isolated 'hot-mode' rulesets.
 
 ### **Core Service Daemon**
 
@@ -58,42 +63,43 @@ When 'signing requests' are processed, the predicate is appled to the request. I
 *	Query Current state
 	* Query Current state example
 
+*	Configuration options
+	*	Boot on startup
+	*	Sign and submit
+
 ### **Process Requests**
 
 *	Service handler
 	* Example
+*	Security
+	*	Encryption
+*	Exposed interface
 
-## 	**Phase Two: Integrate**
+## 	**Phase Two: Refine**
+
+Open beta available to public.
+
+Collect feedback from usage.
+
+Use feedback to fix bugs, and address UX concerns.
+
+Port to additional platforms including air-gap solutions.
+
+External third party plugin exploration.
+
+Pen-testing - try to break hack product.
 
 
+##	**Phase Three: Integrate**
 
-##	**Phase Three: Refine**
+Release v1.00
 
+Core service should only receive bug fixes in this phase, no new features.
 
+UX/UI features may be added.
 
+Provide thorough documentation.
 
+Design logo
 
-## **Original Milestones**
-
-```
-Month 1: Core Service Daemon
-
-Create PoC that boots on startup and runs the Sentinel software as a background service daemon.
-The PoC should be able to generate personalized access tokens allowing other users to sign their transactions using a limited set of defined rules. All communication will be secure using modern cryptographic methods.
-
-Month 2: Service integration and rule expansion
-Create a mock-service that accesses an account using the Sentinel interface. Once the account owner offers the service a restricted access token to the mock-service provider, the mock-service can sign transactions through the Sentinel. Invariants must be tested to ensure rules cannot be violated. This time will also be spent adding new rule types and potentially implementing the 'hot-mode' ruleset.
-
-Month 3: Public availability
-Beta product launch. Ensure a reliable and thorough means of collecting user feedback exists. Host web page, release product information and use cases. Demo videos, general PR related campaigns and refinement of software component.
-
-Month 4: Hardware port
-To enable the full vision and to promote better security hygiene, the design will be ported to run on a standalone hardware device, tentatively the Raspberry Pi.
-The hardware version will offer better security by avoiding the possibility of compromised OS's to obtain secret keys and creating an air gap between online services.
-
-Month 5: Public availability of hardware port
-Similar to month 3 but for the hardware component.
-
-Month 6: Refine and Release
-Bring entire project to a stable state for official v1.0 release. Allow project to be easily expanded by other uses if needed. Include any additional security provisions if needed.
-```
+Create videos, and other PR publish product information and use cases.

@@ -8,12 +8,13 @@ The 'Define' phase is characterized by initial development and feature implement
 ##	Sentinel Admin API
 
 ## Grant Token
-Generates an access token
+Common fields for all token generation requests.
 
 ```ts
-interface Grant extends GrantPayment
+interface GrantCommon
 {
-	expire?: ExpireDate   // Token access is revoked after this date.
+  expire?: Date   // Token access is revoked after this date.
+  frequency?: Duration
 }
 ```
 
@@ -21,12 +22,12 @@ Allows token owner to send a payment of up to {value} {currency} from {source} a
 ```ts
 interface GrantPayment =
 {
-	payment:
-	{
-		source: string,
-		destination: string,
-		currency:  XRPL.Amount,
-	}
+  payment:
+  {
+    source: string,
+    destination: string,
+    currency:  XRPL.Amount,
+  }
 }
 ```
 
@@ -34,13 +35,13 @@ Allows token owner to send a payment of up to {value} {currency} from {source} a
 ```ts
 interface GrantOrder =
 {
-	order:
-	{
-		source: string,
-		TakerGets: XRPL.Amount,
+  order:
+  {
+    source: string,
+    TakerGets: XRPL.Amount,
     TakerPays: XRPL.Amount,
-		value: number
-	}
+    value: number
+  }
 }
 ```
 
@@ -48,7 +49,7 @@ interface GrantOrder =
 Grant a token that allows the token owner to send 10 XRP to themselves before the end of the year 2022
 ```ts
 const source = "rN7n7otQDd6FczFgLdSqtcsAUxDkw6fzRH";
-const destination = "	rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn";
+const destination = "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn";
 const currency = "XRP"
 const value = 10
 
@@ -78,18 +79,18 @@ The XRPL ruleset understands what transactions are valid on the XRPL.
 ## Server
 
 *	Generate access token
-	* Generate access token example
+  * Generate access token example
 *	Revoke access token
-	* Revoke access token example
+  * Revoke access token example
 *	Query transaction history
-	* Query transaction history example
+  * Query transaction history example
 *	Query Current state
-	* Query Current state example
+  * Query Current state example
 *	PayString
 
 *	Configuration options
-	*	Boot on startup
-	*	Sign and submit
+  *	Boot on startup
+  *	Sign and submit
 
 
 
@@ -104,19 +105,19 @@ Recurring payments with Sentinel leverage the XRPL 'Payment Channels' to allow m
 
 
 *	Query rule options
-	*	Query rule options example
+  *	Query rule options example
 *	Extending ruleset
 *	Define ruleset
-	* Define ruleset Example
+  * Define ruleset Example
 
 * Isolated 'hot-mode' rulesets.
 
 ##  Request Processing
 
 *	Request handler
-	* Example
+  * Example
 *	Security
-	*	Encryption
+  *	Encryption
 *	Exposed interface
 
 

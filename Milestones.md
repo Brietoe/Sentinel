@@ -1,30 +1,58 @@
-# Milestones [Active Draft]
+# **Milestones** [Active Draft]
 
 The 6 month project timeline is broken down into three two-month-phases, **Define**, **Refine** and **Integrate**.
 
 #	Phase One: Define
 The 'Define' phase is characterized by initial development and feature implementation.
 
+##	Sentinel Admin API
+
+```ts
+interface Common =
+{
+	expire?: number
+}
+
+interface PaymentGrant =
+{
+	payment:
+	{
+		source: string,
+		destination: string,
+		currency: string,
+		max: number
+	}
+}
+
+```
+
+## Grant Token
+Request:
+Generates an access token
+
+
+
+
+
+
+##	Token Request
+
+
+## Generate Token
+Generating a tokens
+
+
+
+
+
 ## Logical Rules Engine
-The rules engine consists of ruleset plugins that interpret, describe and validate rules.
+The *rules engine* define rulesets that interpret, describe and validate rules.
 
-###	Payments
-Simple payments with Sentinel leverage the XRPL 'Checks' feature to allow a counterparty to withdrawl an asset from the users account up to some specified maximum.
-
-
-###	Recurring payments
-Recurring payments with Sentinel leverage the XRPL 'Payment Channels' to allow multiple payments for a service.
+The native Sentinel ruleset is the XRPL.
+The XRPL ruleset understands what transactions are valid on the XRPL.
 
 
-*	Query rule options
-	*	Query rule options example
-*	Extending ruleset
-*	Define ruleset
-	* Define ruleset Example
-
-* Isolated 'hot-mode' rulesets.
-
-### Core Server Daemon
+## Server
 
 *	Generate access token
 	* Generate access token example
@@ -40,13 +68,34 @@ Recurring payments with Sentinel leverage the XRPL 'Payment Channels' to allow m
 	*	Boot on startup
 	*	Sign and submit
 
-## Process Requests
+
+
+###	XRPL Ruleset Examples
+
+###	Payment
+Simple payments with Sentinel leverage the XRPL 'Checks' feature to allow a counterparty to withdrawl an asset from the users account up to some specified maximum.
+
+
+###	Recurring payment
+Recurring payments with Sentinel leverage the XRPL 'Payment Channels' to allow multiple payments for a service.
+
+
+*	Query rule options
+	*	Query rule options example
+*	Extending ruleset
+*	Define ruleset
+	* Define ruleset Example
+
+* Isolated 'hot-mode' rulesets.
+
+##  Request Processing
 
 *	Request handler
 	* Example
 *	Security
 	*	Encryption
 *	Exposed interface
+
 
 # 	Phase Two: Refine
 

@@ -11,21 +11,35 @@ The 'Define' phase is characterized by initial development and feature implement
 Generates an access token
 
 ```ts
-interface GrantRequest extends PaymentGrant
+interface Grant extends GrantPayment
 {
-	expire?: ExpireDate
+	expire?: ExpireDate   // Token access is revoked after this date.
 }
 ```
 
+Allows token owner to send a payment of up to {value} {currency} from {source} address to {destination} address.
 ```ts
-interface PaymentGrant =
+interface GrantPayment =
 {
 	payment:
 	{
 		source: string,
 		destination: string,
-		currency: string,
-		max: number
+		currency:  XRPL.Amount,
+	}
+}
+```
+
+Allows token owner to send a payment of up to {value} {currency} from {source} address to {destination} address.
+```ts
+interface GrantOrder =
+{
+	order:
+	{
+		source: string,
+		TakerGets: XRPL.Amount,
+    TakerPays: XRPL.Amount,
+		value: number
 	}
 }
 ```
@@ -52,16 +66,7 @@ const grantPaymentRequest =
 
 
 
-
 ##	Token Request
-
-
-## Generate Token
-Generating a tokens
-
-
-
-
 
 ## Logical Rules Engine
 The *rules engine* define rulesets that interpret, describe and validate rules.

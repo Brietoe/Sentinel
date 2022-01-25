@@ -2,6 +2,8 @@
 
 The 6 month project timeline is broken down into three two-month-phases, **Define**, **Refine** and **Integrate**.
 
+Note: Specified API's are subject to schema changes.
+
 #	Phase One: Define
 The 'Define' phase is characterized by initial development and feature implementation.
 
@@ -70,9 +72,9 @@ const grantPaymentRequest =
 
 ##	External Token Request
 
-Sentinel can optionally be configured to allow unsolicited access token requests over the network. If enabled, when a well formed request is received, the user will receive a message for the user to manually review.
+Sentinel can optionally be configured to allow unsolicited access token requests over the network. If enabled, when a well formed request is received, the user will receive a message for manual review.
 
-If unsolicited requests are disabled, the counterparty can provide the access token request via QR code or URL endpoint.
+If unsolicited requests are disabled, the counterparty can provide the access token request via QR code, URL endpoint or manual entry.
 
 
 ## Logical Rules Engine
@@ -86,18 +88,15 @@ Signing request
 ## Server
 
 *	Generate access token
-  * Generate access token example
 *	Revoke access token
-  * Revoke access token example
 *	Query transaction history
-  * Query transaction history example
 *	Query Current state
-  * Query Current state example
-*	PayString
+*	Query PayString
 
 *	Configuration options
   *	Boot on startup
   *	Sign and submit
+  * Unsolicited requests
 
 
 

@@ -7,12 +7,16 @@ The 'Define' phase is characterized by initial development and feature implement
 
 ##	Sentinel Admin API
 
+###	Granting Tokens
+
 ```ts
 interface Common =
 {
 	expire?: number
 }
+```
 
+```ts
 interface PaymentGrant =
 {
 	payment:

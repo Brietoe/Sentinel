@@ -97,6 +97,8 @@ Signing request
   *	Boot on startup
   *	Sign and submit
   * Unsolicited requests
+  * Multi-signing
+  * Live ledger analysis
 
 
 

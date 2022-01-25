@@ -7,12 +7,13 @@ The 'Define' phase is characterized by initial development and feature implement
 
 ##	Sentinel Admin API
 
-###	Granting Tokens
+## Grant Token
+Generates an access token
 
 ```ts
-interface Common =
+interface GrantRequest extends PaymentGrant
 {
-	expire?: number
+	expire?: ExpireDate
 }
 ```
 
@@ -27,14 +28,27 @@ interface PaymentGrant =
 		max: number
 	}
 }
-
 ```
 
-## Grant Token
-Request:
-Generates an access token
+### Example
+Grant a token that allows the token owner to send 10 XRP to themselves before the end of the year 2022
+```ts
+const source = "rN7n7otQDd6FczFgLdSqtcsAUxDkw6fzRH";
+const destination = "	rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn";
+const currency = "XRP"
+const value = 10
 
+const expire =
+{
+  year: 2023
+}
 
+const grantPaymentRequest =
+{
+  payment: { source, destination, currency, value },
+  expire
+}
+```
 
 
 

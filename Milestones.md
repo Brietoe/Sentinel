@@ -10,8 +10,11 @@ The 'Define' phase is characterized by initial development and feature implement
 ## Grant Token
 Common fields for all token generation requests.
 
+If request is successful Sentinel will generate the access token in the form of a UUID.
+The token UUID must be encrypted using the counterparties public key then sent to the counterparty. The access token should be kept private.
+
 ```ts
-interface GrantCommon
+interface GrantCommonRequest
 {
   expire?: Date   // Token access is revoked after this date.
   frequency?: Duration
@@ -20,7 +23,7 @@ interface GrantCommon
 
 Allows token owner to send a payment of up to {value} {currency} from {source} address to {destination} address.
 ```ts
-interface GrantPayment =
+interface GrantPaymentRequest =
 {
   payment:
   {
@@ -33,7 +36,7 @@ interface GrantPayment =
 
 Allows token owner to send a payment of up to {value} {currency} from {source} address to {destination} address.
 ```ts
-interface GrantOrder =
+interface GrantOrderRequest =
 {
   order:
   {
@@ -65,15 +68,19 @@ const grantPaymentRequest =
 }
 ```
 
+##	External Token Request
 
+Sentinel can optionally be configured to allow unsolicited access token requests over the network. If enabled, when a well formed request is received, the user will receive a message for the user to manually review.
 
-##	Token Request
+If unsolicited requests are disabled, the counterparty can provide the access token request via QR code or URL endpoint.
+
 
 ## Logical Rules Engine
 The *rules engine* define rulesets that interpret, describe and validate rules.
 
-The native Sentinel ruleset is the XRPL.
 The XRPL ruleset understands what transactions are valid on the XRPL.
+
+Signing request
 
 
 ## Server

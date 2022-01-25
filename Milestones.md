@@ -2,7 +2,7 @@
 
 The 6 month project timeline is broken down into three two-month-phases, **Define**, **Refine** and **Integrate**.
 
-Note: Specified API's are subject to schema changes.
+Note: Specified API's are subject to schema changes. Active research is being conducted to determine where I can leverage XRPL Checks, Payment channels and Escrow.
 
 #	Phase One: Define
 The 'Define' phase is characterized by initial development and feature implementation.

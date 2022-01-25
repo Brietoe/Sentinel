@@ -2,55 +2,18 @@
 
 The 6 month project timeline is broken down into three two-month-phases, **Define**, **Refine** and **Integrate**.
 
-### **Definitions**
+#	**Phase One: Define**
+The 'Define' phase is characterized by initial development and feature implementation.
 
-### User
-Primary person or entity using Sentinel to generate access tokens that grant limited access to an XRPL account for transaction signing.
+## **Logical Rules Engine**
+The rules engine consists of ruleset plugins that interpret, describe and validate rules.
 
-### Counterparty
-External person or entity that requests permission to submit transactions on the *users* behalf.
-
-### Server
-The software process that the *user* runs to use the sentinel protocol. This software is the users primary interface for configuration and monitoring. The server can run as a background process or be instantiated upon request. The server can be run by a custodian if needed but provides no protection from a 'bad actor' custodian; Sentinel can be configured with distributed multi-signing to address this issue.
-
-The server is responsible for:
-* Granting access tokens
-* Storing access tokens
-* Providing a log of all transactions
-* Signing transations
-*	Revoking access tokens
-*	Expose an external interface for access requests and transaction signing.
-
-###	Client
-The software component that connects to the *server* and submits requests for access or transaction signing. This is the software instance that the *counterparty* uses to interact with Sentinel.
-
-###	Ruleset
-The set of all rule configuration options within the domain of discourse.
-
-### Rule
-A predicate defined by a Ruleset element and it's configuration options.
-When 'signing requests' are processed, the predicate is appled to the request.
-If every predicate invariants are respected then 'transaction request' will be submitted for signing.
+###	**Payments**
+Simple payments with Sentinel leverage the XRPL 'Checks' feature to allow a counterparty to withdrawl an asset from the users account up to some specified maximum.
 
 
-
-##	**Phase One: Define**
-
-
-### **Logical Rules Engine**
-
-**Define a new rule**
-
-Example
-```
-Netflix would like to accept XRP as a valid payment option so they integrated the Sentinel protocol to enable recurring monthly payments.
-
-Netflix must first define the scope of their request.
-
-Using the customers PayString ID, Neflix can discover the customers Sentinel server endpoint.
-```
-
-
+###	**Recurring payments**
+Recurring payments with Sentinel leverage the XRPL 'Payment Channels' to allow multiple payments for a service.
 
 
 *	Query rule options
@@ -77,7 +40,7 @@ Using the customers PayString ID, Neflix can discover the customers Sentinel ser
 	*	Boot on startup
 	*	Sign and submit
 
-### **Process Requests**
+## **Process Requests**
 
 *	Request handler
 	* Example
@@ -85,7 +48,7 @@ Using the customers PayString ID, Neflix can discover the customers Sentinel ser
 	*	Encryption
 *	Exposed interface
 
-## 	**Phase Two: Refine**
+# 	**Phase Two: Refine**
 
 Open beta available to public.
 
@@ -100,7 +63,7 @@ External third party plugin exploration.
 Pen-testing - try to break hack product.
 
 
-##	**Phase Three: Integrate**
+#	**Phase Three: Integrate**
 
 Release v1.00
 
@@ -113,3 +76,36 @@ Provide thorough documentation.
 Design logo
 
 Create videos, and other PR publish product information and use cases.
+
+
+
+### **Definitions**
+
+### User
+Primary person or entity using Sentinel to generate access tokens that grant limited access to an XRPL account for transaction signing.
+
+### Counterparty
+External person or entity that requests permission to submit transactions on the *users* behalf.
+
+### Server
+The software process that the *user* runs to use the sentinel protocol. This software is the users primary interface for configuration and monitoring. The server can run as a background process or be instantiated upon request. The server can be run by a custodian if needed but provides no protection from a 'bad actor' custodian; Sentinel can be configured with distributed multi-signing to address this issue.
+
+The server is responsible for:
+* Granting access tokens
+* Storing access tokens
+* Providing a log of all transactions
+* Signing transations
+*	Revoking access tokens
+*	Expose an external interface for access requests and transaction signing.
+
+###	Client
+The software component that connects to the *server* and submits requests for access or transaction signing. This is the software instance that the *counterparty* uses to interact with Sentinel.
+
+###	Ruleset
+The set of all rule configuration options within the domain of discourse.
+
+### Rule
+A rule is just a simple immutable value represented as a JSON Document object.
+A predicate defined by a Ruleset element and it's configuration options.
+When 'signing requests' are processed, the predicate is appled to the request.
+If every predicate invariants are respected then 'transaction request' will be submitted for signing.
